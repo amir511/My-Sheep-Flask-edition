@@ -4,3 +4,4 @@ flask_env
 __pycache__
 settings.json
 *.sqlite3
+data.db
