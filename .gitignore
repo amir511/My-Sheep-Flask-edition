@@ -1,0 +1,6 @@
+.mypy_cache
+flask_env
+*.pyc
+__pycache__
+settings.json
+*.sqlite3
