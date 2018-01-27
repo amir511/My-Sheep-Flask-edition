@@ -19,11 +19,11 @@ class Stage(BaseModel):
         return 'Stage object: ' + self.name
 
 class Klass(BaseModel):
-    id = CharField()
+    class_id = CharField()
     stage = ForeignKeyField(Stage, related_name='classes')
     
     def __repr__(self):
-        return 'Klass object: ' + self.id + '/' +self.stage  
+        return 'Klass object: ' + self.class_id + '/' +self.stage  
     
 class Sheep(BaseModel):
     name = CharField()
