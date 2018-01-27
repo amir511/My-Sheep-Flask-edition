@@ -27,22 +27,22 @@ class Klass(BaseModel):
     
 class Sheep(BaseModel):
     name = CharField()
-    klass = ForeignKeyField(Klass ,related_name="sheeps")
-    picture = BlobField()
-    address = TextField()
-    mobile = CharField(max_length=22)
-    home_number = CharField(max_length=22)
-    father_number = CharField(max_length=22)
-    mother_number = CharField(max_length=22)
-    grandparent_number = CharField(max_length=22)
-    other_number_1 = CharField(max_length=22)
-    other_number_2 = CharField(max_length=22)
-    other_address = TextField()
-    confession_father = CharField()
-    birthday = DateField()
-    school = CharField()
-    email = CharField()
-    comments = TextField()
+    klass = ForeignKeyField(Klass, related_name="sheeps")
+    picture = BlobField(null=True)
+    address = TextField(null=True)
+    mobile = CharField(null=True, max_length=22)
+    home_number = CharField(null=True, max_length=22)
+    father_number = CharField(null=True, max_length=22)
+    mother_number = CharField(null=True, max_length=22)
+    grandparent_number = CharField(null=True, max_length=22)
+    other_number_1 = CharField(null=True, max_length=22)
+    other_number_2 = CharField(null=True, max_length=22)
+    other_address = TextField(null=True)
+    confession_father = CharField(null=True)
+    birthday = DateField(null=True)
+    school = CharField(null=True)
+    email = CharField(null=True)
+    comments = TextField(null=True)
 
 
     def __repr__(self):
@@ -53,8 +53,8 @@ class Servant(BaseModel):
     email = CharField()
     password = CharField()
     klass = ForeignKeyField(Klass, related_name="servants")
-    leader_of = ForeignKeyField(Klass, related_name="leader")
-    is_admin = BooleanField()
+    leader_of = ForeignKeyField(Klass, null=True, related_name="leader")
+    is_admin = BooleanField(default=False)
 
     def __repr__(self):
         return 'Servant object: ' + self.name
@@ -64,7 +64,7 @@ class Visit(BaseModel):
     sheep = ForeignKeyField(Sheep, related_name='visits')
     servants = TextField()
     visit_date = DateTimeField()
-    comments = TextField()
+    comments = TextField(null=True)
     
     def __repr__(self):
         return 'Visit object, to: ' + self.sheep.name + ' on: ' + self.visit_date
@@ -82,6 +82,7 @@ class AttendanceRecord(BaseModel):
 
 # Append this list whenever you add new models
 TABLES_LIST = [
+    Stage,
     Klass,
     Sheep,
     Servant,
