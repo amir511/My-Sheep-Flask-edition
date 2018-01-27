@@ -1,7 +1,7 @@
 import os
 from peewee import SqliteDatabase
 from peewee import Model
-from peewee import (CharField, BlobField, 
+from peewee import (CharField, BlobField,
                     BooleanField, ForeignKeyField,
                     TextField,DateField,
                     DateTimeField,)
@@ -50,9 +50,11 @@ class Sheep(BaseModel):
 
 class Servant(BaseModel):
     name = CharField()
+    email = CharField()
+    password = CharField()
     klass = ForeignKeyField(Klass, related_name="servants")
     leader_of = ForeignKeyField(Klass, related_name="leader")
-    is_admin  = BooleanField()
+    is_admin = BooleanField()
 
     def __repr__(self):
         return 'Servant object: ' + self.name
