@@ -5,3 +5,4 @@ __pycache__
 settings.json
 *.sqlite3
 data.db
+.vscode/launch.json
