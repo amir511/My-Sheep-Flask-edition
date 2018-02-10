@@ -69,12 +69,7 @@ for class_ in classes:
                             leader_of=leader_of, is_admin=is_admin)
         servant.save()
         class_leader_flag = True
-
-# Create Random visits
-for class_ in classes:
-    for i in range(20):
-        sheep_id = randint(1,25)
-        
+       
 
 
 
