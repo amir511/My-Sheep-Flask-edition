@@ -1,3 +1,7 @@
+body{
+    background-image: url("/static/img/doodles.png");
+    font-family: 'Ubuntu Condensed', sans-serif;
+}
 nav{
-    background: linear-gradient(120deg,fuchsia,cyan,purple)
+    background: linear-gradient(120deg,rgb(136, 220, 231),rgb(181, 79, 190))
 }
