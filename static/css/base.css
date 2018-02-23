@@ -1,7 +1,11 @@
-body{
-    background-image: url("/static/img/doodles.png");
-    font-family: 'Ubuntu Condensed', sans-serif;
+nav .nav-item{
+    font-size: 150%;
 }
-nav{
-    background: linear-gradient(120deg,rgb(136, 220, 231),rgb(181, 79, 190))
+.navbar{
+    height: 55px;
+}
+body{
+    /* background-image: url("/static/img/diagmonds2.png"); */
+    background-color: #f5f5f5;
+    font-family: 'Ubuntu Condensed', sans-serif;
 }
