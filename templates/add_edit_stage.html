@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="col-md-8 offset-md-2">
+    <br>
+    <br>
+    <h2 class="text-center">Add a new stage</h2>
+
+    <form method="POST">
+        <div class="col">
+            <input type="text" class="form-control" name="name" placeholder="Enter Stage Name">
+        </div>
+        <br>
+        <div class="col">
+            <label for="select_class">Select Classes in the stage</label>
+            <select multiple="" class="form-control" id="select_class">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+        </div>
+        <br>
+        <div class="col">
+            <label for="stage_leader">Enter Stage Leader</label>
+            <select class="form-control" id="stage_leader">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+        </div>
+        <br>
+        <div class="col">
+            <label for="sub_leader">Enter Subleader(optional)</label>
+            <select class="form-control" id="sub_leader">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+        </div>
+        <br>
+        <input class="col-md-6 offset-md-3 btn btn-primary" type="submit" value="Add Stage">
+    </form>
+</div>
+{% endblock body %}
